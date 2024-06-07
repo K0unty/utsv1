@@ -8,7 +8,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
   <div class="button">
     <button class="btn"> <a href="https://megasite.meanworld.com/trailers/2425_jadeluv_mb.mp4" target="_blank">BtnTest</a> </button>
-    <button class="btn"> <a href="../L/S1/UTS1/first-project/first-project/index.html" target="_blank">Lesson1</a>
+    <button class="btn"> <a href="/L/S1/UTS1/first-project/first-project/index.html" target="_blank">Lesson1</a>
     </button>
     <button class="btn"> Suck </button>
   <div>
