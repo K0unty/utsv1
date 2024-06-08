@@ -1,4 +1,4 @@
-// Prettier ESLINT, Indent Rainbow , Error Lens, Color , Icons , Obsidian Theme , Mayuki theme 
+// Prettier, Prettier Typescript Course, Indent Rainbow , Error Lens, Color , Icons , Obsidian Theme , Mayuki theme 
 {
   "workbench.list.smoothScrolling": true,
   "editor.smoothScrolling": true,
