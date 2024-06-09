@@ -25,6 +25,10 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       ).href
     }" target="_blank">Lesson1<br>adjusted-project</a>
     </button>
+    <button class="btn"> <a href="${
+      new URL("./L/", import.meta.url).href
+    }" target="_blank">S110<br>adjusted-project</a>
+    </button>
     <button class="btn"> Suck </button>
     
   <div>
