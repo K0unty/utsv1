@@ -5,7 +5,8 @@ export default defineConfig({
     rollupOptions: {
       input: [
         "/index.html",
-        "L/**/index.html", // include all index.html files in subdir and its subdirectories
+        "L/S1/UTS1/adjusted-project/adjusted-project/index.html",
+        "L/S1/UTS1/first-project/first-project/index.html",
       ],
     },
   },
