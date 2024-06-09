@@ -5,7 +5,7 @@ export default defineConfig({
     rollupOptions: {
       input: [
         "/index.html",
-        "/L/**/index.html", // include all index.html files in subdir and its subdirectories
+        "src/L/**/index.html", // include all index.html files in subdir and its subdirectories
       ],
     },
   },
