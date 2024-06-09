@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #020617;
+  color: #f59e0b;
+  transition: all 300ms;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Anta", sans-serif;
+}
+
+h1 {
+  font-family: "Courgette";
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
