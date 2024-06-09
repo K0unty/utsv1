@@ -1,4 +1,4 @@
-// Prettier, Prettier Typescript Course, Indent Rainbow , Error Lens, Color , Icons , Obsidian Theme , Mayuki theme 
+// Prettier , Indent Rainbow , Error Lens, Color , Typescript , Icons , Obsidian Theme , Mayuki theme
 {
   "workbench.list.smoothScrolling": true,
   "editor.smoothScrolling": true,
@@ -13,6 +13,8 @@
   "files.autoSave": "onFocusChange",
   "editor.cursorSmoothCaretAnimation": "on",
   "workbench.iconTheme": "simple-icons",
+  "editor.stickyScroll.enabled": true,
   "workbench.colorTheme": "Obsidian Dark",
-  "editor.stickyScroll.enabled": true
+  "terminal.integrated.cursorWidth": 2,
+  "editor.cursorBlinking": "expand"
 }
