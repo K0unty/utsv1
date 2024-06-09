@@ -1,4 +1,5 @@
-import { defineConfig, glob } from "vite";
+import { defineConfig } from "vite";
+import glob from "glob";
 
 export default defineConfig({
   build: {
