@@ -32,7 +32,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </button>
     <button class="btn"> <a href="${
       new URL("./L/S2/index.html", import.meta.url).href
-    }" target="_blank">S2-12,13,14,15,16</a>
+    }" target="_blank">S2-12,13,14,15,16<br>19,20</a>
     </button>
     <button class="btn"> Suck </button>
     
