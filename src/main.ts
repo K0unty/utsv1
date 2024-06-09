@@ -13,14 +13,14 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <button class="btn"> <a href="https://megasite.meanworld.com/trailers/2425_jadeluv_mb.mp4" target="_blank">BtnTest</a> </button>
     <button class="btn"> <a href="${
       new URL(
-        "/L/S1/UTS1/first-project/first-project/index.html",
+        "./L/S1/UTS1/first-project/first-project/index.html",
         import.meta.url
       ).href
     }" target="_blank">Lesson1<br>first-project</a>
     </button>
     <button class="btn"> <a href="${
       new URL(
-        "/L/S1/UTS1/adjusted-project/adjusted-project/index.html",
+        "./L/S1/UTS1/adjusted-project/adjusted-project/index.html",
         import.meta.url
       ).href
     }" target="_blank">Lesson1<br>adjusted-project</a>
