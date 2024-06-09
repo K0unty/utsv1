@@ -1,5 +1,5 @@
 /* 
-Section 2 : 12,13,14,15
+Section 2 : 12,13,14,15,16,17
 */
 
 console.log(
@@ -9,6 +9,8 @@ console.log(
 `,
   "color:yellow;font-size:1.2rem"
 );
+
+// == Work section
 
 const addNumber = function add(
   n1: number,
@@ -25,7 +27,8 @@ const addNumber = function add(
   }
   return result;
 };
-const number1 = 5;
+let number1: number;
+number1 = 5;
 const number2 = 2.8;
 const printResult = true;
 const resultPhrase = "Result is: ";
