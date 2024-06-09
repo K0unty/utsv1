@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import glob from "glob";
-import path from "path";
+const glob = require("glob");
+const path = require("path");
 
 export default defineConfig({
   build: {
@@ -9,7 +9,7 @@ export default defineConfig({
         main: "/index.html",
         ...Object.fromEntries(
           glob
-            .sync(path.resolve(__dirname, "src/L/**/index.html"))
+            .sync(path.resolve(__dirname, "src/customDir/**/index.html"))
             .map((filePath) => [
               filePath.replace(/^.*[\\\/]/, "").replace(/index.html$/, ""),
               filePath,
