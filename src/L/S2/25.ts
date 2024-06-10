@@ -3,7 +3,7 @@
 */
 console.log(
   `
-        %cS2-24: LiteralTypes
+        %cS2-25: Type Aliases / Custom Types
         ===========
         `,
   "color:yellow;font-size:1.2rem"
@@ -11,7 +11,7 @@ console.log(
 
 //-- Wok
 
-const combine3 = function combine2(
+const combine2 = function combine2(
   input1: number | string,
   input2: number | string,
   resultConversion: "as-number" | "as-text"
@@ -28,13 +28,13 @@ const combine3 = function combine2(
   return result.toString();
 };
 
-const combAges3 = combine2(30, 26, "as-number");
+const combAges2 = combine2(30, 26, "as-number");
 console.log(combAges2);
 
-const combinedStringAges2 = combine2("30", "26", "as-number");
-console.log(combinedStringAges2);
+const combinedStringAges = combine2("30", "26", "as-number");
+console.log(combinedStringAges);
 
-const combNam3 = combine2("Oin", "jin", "as-text");
+const combNam2 = combine2("Oin", "jin", "as-text");
 console.log(combNam2);
 
 // console.log(combine2(21, 22));
