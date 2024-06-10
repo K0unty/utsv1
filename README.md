@@ -1,6 +1,6 @@
 # 😁
 
-<img src="./public/r.mp4" width="100%">
+<img src="./public/r.gif" width="400%">
 
 # utsv1
 
