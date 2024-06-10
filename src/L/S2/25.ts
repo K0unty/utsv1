@@ -11,10 +11,14 @@ console.log(
 
 //-- Wok
 
+// Type Aliases - For complex type definition
+type Combinable = number | string;
+type ConvDes = "as-number" | "as-text";
+
 const combine2 = function combine2(
-  input1: number | string,
-  input2: number | string,
-  resultConversion: "as-number" | "as-text"
+  input1: Combinable,
+  input2: Combinable,
+  resultConversion: ConvDes
 ) {
   let result;
   if (typeof input1 === "number" && typeof input2 === "number") {
