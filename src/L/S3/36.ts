@@ -1,5 +1,12 @@
 /* 
 36 - Compilng the entire project
+
+Watching the entire project - 
+
+Step 1 
+> tsc --init 
+
+
 */
 
 console.log(
