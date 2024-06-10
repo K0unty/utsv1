@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&family=Cookie&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +38,20 @@ h1:hover {
 * Gradient link: https://www.css-gradient.com/?c1=370170&c2=ccb8f2&gt=l&gd=dtl
 */
   background: linear-gradient(135deg, #370170, #ccb8f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Cookie";
+  background: linear-gradient(
+    109.6deg,
+    rgb(17, 151, 147) 11.2%,
+    rgb(154, 214, 212) 55.4%,
+    rgb(255, 233, 171) 100.2%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
