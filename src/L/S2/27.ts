@@ -12,3 +12,7 @@ const printRes = function (num: number): void {
 };
 
 printRes(add1(5, 12));
+
+// undefined is a valid type in typescript ef as decribed below , but it may
+// No have any use
+let somVal: undefined;

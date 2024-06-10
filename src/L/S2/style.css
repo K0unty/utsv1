@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&family=Cookie&family=Rajdhani&display=swap");
 
 * {
   margin: 0;
@@ -45,7 +45,7 @@ h1:hover {
 }
 
 h2 {
-  font-family: "Cookie";
+  font-family: "Rajdhani";
   background: linear-gradient(
     109.6deg,
     rgb(17, 151, 147) 11.2%,
