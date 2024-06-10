@@ -29,4 +29,16 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
+  transition: all 600ms;
+}
+h1:hover {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=370170&c2=ccb8f2&gt=l&gd=dtl
+*/
+  background: linear-gradient(135deg, #370170, #ccb8f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
 }
