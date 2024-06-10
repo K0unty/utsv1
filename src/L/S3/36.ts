@@ -5,7 +5,7 @@ Watching the entire project -
 
 Step 1 
 > tsc --init 
-
+- This will start watching all files
 
 */
 
