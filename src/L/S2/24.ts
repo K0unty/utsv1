@@ -14,7 +14,7 @@ console.log(
 const combine2 = function combine2(
   input1: number | string,
   input2: number | string,
-  resultConversion: string
+  resultConversion: "as-number" | "as-text"
 ) {
   let result;
   if (typeof input1 === "number" && typeof input2 === "number") {
