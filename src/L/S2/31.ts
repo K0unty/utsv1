@@ -3,8 +3,8 @@
 */
 console.log(
   `
-          %cS230 - The Never Type
-          ===========
+%cS230 - The Never Type
+===========
           `,
   "color:yellow;font-size:1.2rem"
 );
