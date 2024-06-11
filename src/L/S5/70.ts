@@ -13,7 +13,7 @@ console.log(
 // Work Zone
 
 // Creating a class - Making muiltiple departments in a company
-class Department69 {
+class Department70 {
   // Creating a static property
   static fiscalYear = 2020;
 
@@ -26,7 +26,7 @@ class Department69 {
     // this.id = id;
     // this.name = n;
     // To access the static property , you have to access it using the class name and not this keyword
-    // console.log(Department69.fiscalYear);
+    // console.log(Department70.fiscalYear);
   }
 
   // Adding a static method
@@ -35,7 +35,7 @@ class Department69 {
   }
 
   // Methods
-  describe(this: Department69) {
+  describe(this: Department70) {
     console.log(`Dep [${this.id} - ${this.name}]`);
   }
 
@@ -53,27 +53,27 @@ class Department69 {
 }
 
 // New employee from static method L27 - L30
-const empl691 = Department69.creEmp("Bonnies");
-console.log("Maek employee with empl691");
-console.log(empl691, Department69.fiscalYear);
+const empl70 = Department70.creEmp("Bonnies");
+console.log("Maek employee with empl70");
+console.log(empl70, Department70.fiscalYear);
 console.log("------------------");
 
 // Definign a new department with the class above
-const acc69 = new Department69("d1", "Acc");
+const newDep70 = new Department70("d1", "Acc");
 
-acc69.addEmpl("bin");
-acc69.addEmpl("Nal");
+newDep70.addEmpl("bin");
+newDep70.addEmpl("Nal");
 
 // Adding employee directrly since that variable can be called - Alternative method shouldnt be there
-// acc69.empl[2] = "hahah";
-acc69.name = "Fuku";
+// newDep70.empl[2] = "hahah";
+newDep70.name = "Fuku";
 
-acc69.describe();
-acc69.printEmInfo();
+newDep70.describe();
+newDep70.printEmInfo();
 
 // 66 - Creating specialized departments
 // When inheriting with the extends keyword , you will inherit all from the base class
-class iTDep69 extends Department69 {
+class iTDep70 extends Department70 {
   admins: string[];
   constructor(id: string, admins: string[]) {
     super(id, "IT");
@@ -82,11 +82,11 @@ class iTDep69 extends Department69 {
 }
 
 // Creating a new instanc oi the class
-const new_acc69 = new iTDep69("f1", ["boo"]);
-new_acc69.describe();
-console.log(new_acc69);
+const new_acc70 = new iTDep70("f1", ["boo"]);
+new_acc70.describe();
+console.log(new_acc70);
 
-class itacc69 extends Department69 {
+class itacc70 extends Department70 {
   private lastReport: string;
 
   //getter - retrieve value to add complex logic
@@ -126,7 +126,7 @@ class itacc69 extends Department69 {
   }
 }
 
-const acc69_2 = new itacc69("d2", []);
+const acc70 = new itacc70("d2", []);
 
 // Work for 69.ts here
 
@@ -135,15 +135,15 @@ console.log("Math Pi Value" + Math.PI);
 
 //---------
 
-acc69_2.mostRecentReport = "suck";
+acc70.mostRecentReport = "suck";
 
-acc69_2.addItEmpl("puni");
-acc69_2.addItEmpl("pauni");
-acc69_2.printEmInfo();
+acc70.addItEmpl("puni");
+acc70.addItEmpl("pauni");
+acc70.printEmInfo();
 
-acc69_2.addReport("fuked...");
-acc69_2.prReports();
+acc70.addReport("fuked...");
+acc70.prReports();
 
 // Getter and setter methods work
 console.log("Getter Propery");
-console.log(acc69_2.mostRecentReport);
+console.log(acc70.mostRecentReport);
