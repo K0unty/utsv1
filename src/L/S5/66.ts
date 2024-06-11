@@ -54,3 +54,36 @@ acc6.name = "Fuku";
 
 acc6.describe();
 acc6.printEmInfo();
+
+// 66 - Creating specialized departments
+// When inheriting with the extends keyword , you will inherit all from the base class
+class iTDep extends Department6 {
+  admins: string[];
+  constructor(id: string, admins: string[]) {
+    super(id, "IT");
+    this.admins = admins;
+  }
+}
+
+// Creating a new instanc oi the class
+const acc66 = new iTDep("f1", ["boo"]);
+acc66.describe();
+console.log(acc66);
+
+class itacc extends Department6 {
+  constructor(id: string, private reports: string[]) {
+    super(id, "IT Accounting");
+  }
+
+  addReport(text: string) {
+    this.reports.push(text);
+  }
+
+  prReports() {
+    console.log(this.reports);
+  }
+}
+
+const acc7 = new itacc("d2", []);
+acc7.addReport("fuked...");
+acc7.prReports();
