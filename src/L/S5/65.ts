@@ -14,12 +14,12 @@ console.log(
 
 // Creating a class - Making muiltiple departments in a company
 class Department5 {
-  // private id: string;
+  // private readonly id: string;
   // private name: string = "DEFAULT";
   private empl: string[] = [];
 
-  // Constructor Function
-  constructor(private id: string, public name: string) {
+  // Constructor Function - adding the readonly keyword at this construtor
+  constructor(private readonly id: string, public name: string) {
     // this.id = id;
     // this.name = n;
   }
@@ -31,6 +31,7 @@ class Department5 {
 
   // Addign employee Method
   addEmpl(empl: string) {
+    // this.id = "d2";
     this.empl.push(empl);
   }
 
