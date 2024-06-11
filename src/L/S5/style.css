@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&family=Cookie&family=Rajdhani&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #031b37;
+  color: #f59e0b;
+  transition: all 300ms;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Anta", sans-serif;
+}
+
+h1 {
+  font-family: "Courgette";
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  transition: all 600ms;
+}
+h1:hover {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=370170&c2=ccb8f2&gt=l&gd=dtl
+*/
+  background: linear-gradient(135deg, #370170, #ccb8f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Rajdhani";
+  background: linear-gradient(
+    109.6deg,
+    rgb(17, 151, 147) 11.2%,
+    rgb(154, 214, 212) 55.4%,
+    rgb(255, 233, 171) 100.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  padding-top: 50px;
+}
