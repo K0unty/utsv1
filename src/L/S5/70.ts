@@ -86,7 +86,7 @@ const new_acc70 = new iTDep70("f1", ["boo"]);
 new_acc70.describe();
 console.log(new_acc70);
 
-class itacc70 extends Department70 {
+class AccDep70 extends Department70 {
   private lastReport: string;
 
   //getter - retrieve value to add complex logic
@@ -126,7 +126,7 @@ class itacc70 extends Department70 {
   }
 }
 
-const acc70 = new itacc70("d2", []);
+const acc70 = new AccDep70("d2", []);
 
 // Work for 69.ts here
 
