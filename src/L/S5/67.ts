@@ -16,7 +16,7 @@ console.log(
 class Department67 {
   // private readonly id: string;
   // private name: string = "DEFAULT";
-  private empl: string[] = [];
+  protected empl: string[] = [];
 
   // Constructor Function - adding the readonly keyword at this construtor
   constructor(private readonly id: string, public name: string) {
@@ -75,6 +75,13 @@ class itacc2 extends Department67 {
     super(id, "IT Accounting");
   }
 
+  addItEmpl(name: string) {
+    if (name === "puni") {
+      return;
+    }
+    this.empl.push(name);
+  }
+
   addReport(text: string) {
     this.reports.push(text);
   }
@@ -85,5 +92,9 @@ class itacc2 extends Department67 {
 }
 
 const acc72 = new itacc2("d2", []);
-acc7.addReport("fuked...");
-acc7.prReports();
+acc72.addItEmpl("puni");
+acc72.addItEmpl("pauni");
+acc72.printEmInfo();
+
+acc72.addReport("fuked...");
+acc72.prReports();
