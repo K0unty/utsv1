@@ -4,7 +4,7 @@
 
 console.log(
   `
-  %cS5 - 60: Creating a class  
+  %cS5 - 62: Creating a class  
   ===========
                 `,
   "color:yellow;font-size:1.2rem"
