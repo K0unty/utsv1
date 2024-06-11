@@ -13,7 +13,7 @@ console.log(
 // Work Zone
 
 // Creating a class - Making muiltiple departments in a company
-class Department68 {
+class Department69 {
   // private readonly id: string;
   // private name: string = "DEFAULT";
   protected empl: string[] = [];
@@ -25,7 +25,7 @@ class Department68 {
   }
 
   // Methods
-  describe(this: Department68) {
+  describe(this: Department69) {
     console.log(`Dep [${this.id} - ${this.name}]`);
   }
 
@@ -43,21 +43,21 @@ class Department68 {
 }
 
 // Definign a new department with the class above
-const acc6812 = new Department68("d1", "Acc");
+const acc69 = new Department69("d1", "Acc");
 
-acc6812.addEmpl("bin");
-acc6812.addEmpl("Nal");
+acc69.addEmpl("bin");
+acc69.addEmpl("Nal");
 
 // Adding employee directrly since that variable can be called - Alternative method shouldnt be there
-// acc681.empl[2] = "hahah";
-acc6812.name = "Fuku";
+// acc69.empl[2] = "hahah";
+acc69.name = "Fuku";
 
-acc6812.describe();
-acc6812.printEmInfo();
+acc69.describe();
+acc69.printEmInfo();
 
 // 66 - Creating specialized departments
 // When inheriting with the extends keyword , you will inherit all from the base class
-class iTDep68 extends Department68 {
+class iTDep69 extends Department69 {
   admins: string[];
   constructor(id: string, admins: string[]) {
     super(id, "IT");
@@ -66,11 +66,11 @@ class iTDep68 extends Department68 {
 }
 
 // Creating a new instanc oi the class
-const acc681 = new iTDep68("f1", ["boo"]);
-acc681.describe();
-console.log(acc681);
+const new_acc69 = new iTDep69("f1", ["boo"]);
+new_acc69.describe();
+console.log(new_acc69);
 
-class itacc68 extends Department68 {
+class itacc69 extends Department69 {
   private lastReport: string;
 
   //getter - retrieve value to add complex logic
@@ -110,17 +110,17 @@ class itacc68 extends Department68 {
   }
 }
 
-const acc722 = new itacc68("d2", []);
+const acc69_2 = new itacc69("d2", []);
 
-acc722.mostRecentReport = "suck";
+acc69_2.mostRecentReport = "suck";
 
-acc722.addItEmpl("puni");
-acc722.addItEmpl("pauni");
-acc722.printEmInfo();
+acc69_2.addItEmpl("puni");
+acc69_2.addItEmpl("pauni");
+acc69_2.printEmInfo();
 
-acc722.addReport("fuked...");
-acc722.prReports();
+acc69_2.addReport("fuked...");
+acc69_2.prReports();
 
 // Getter and setter methods work
 console.log("Getter Propery");
-console.log(acc722.mostRecentReport);
+console.log(acc69_2.mostRecentReport);
