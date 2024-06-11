@@ -1,10 +1,10 @@
 /* 
-68: Getter and Setter Methods
+70: Abstract classes
 */
 
 console.log(
   `
-  %cS5 - 68: Getter and Setter Methods
+  %cS5 - 70: Abstract classes
   ===========
                 `,
   "color:yellow;font-size:1.2rem"
