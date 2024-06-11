@@ -40,3 +40,15 @@ const add54 = (...num: number[]) => {
 
 const addedNumbers = add54(5, 10, 2.1, 5, 9, 9, 9);
 console.log(addedNumbers);
+
+// using tuple to set total number of received params
+
+// The []  is the tuples , and it specified 3 numbers which are accepted as params
+const add541 = (...num: [number, number, number]) => {
+  return num.reduce((cuResult, curValue) => {
+    return cuResult + curValue;
+  }, 0);
+};
+
+const addedNumbers1 = add541(5, 10, 2.1);
+console.log(addedNumbers1);
