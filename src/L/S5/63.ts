@@ -15,6 +15,7 @@ console.log(
 // Creating a class - Making muiltiple departments in a company
 class Department3 {
   name: string = "DEFAULT";
+  private empl: string[] = [];
 
   // Constructor Function
   constructor(n: string) {
@@ -25,14 +26,28 @@ class Department3 {
   describe(this: Department2) {
     console.log(`Deparment⚙️: ` + this.name);
   }
+
+  // Addign employee Method
+  addEmpl(empl: string) {
+    this.empl.push(empl);
+  }
+
+  // Printing the added emplyee
+  printEmInfo() {
+    console.log(this.empl.length);
+    console.log(this.empl);
+  }
 }
 
 // Definign a new department with the class above
 const acc3 = new Department3("Acc");
-// console.log(acc2);
 
-// Calling the described method from the depeartment class
+acc3.addEmpl("bin");
+acc3.addEmpl("Nal");
+
+// Adding employee directrly since that variable can be called - Alternative method shouldnt be there
+// acc3.empl[2] = "hahah";
+acc3.name = "Fuku";
+
 acc3.describe();
-
-const acc3Copy = { name: "Dummy", describe: acc3.describe };
-acc3Copy.describe();
+acc3.printEmInfo();
