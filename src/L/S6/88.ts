@@ -161,4 +161,10 @@ moveAnimal88({
 
 interface ErrorContainer88 {
   // Error object identifier - { email: not valid, username: 'Start with char'}
+  [prop: string]: string; //every prop will be a string with value string
 }
+
+const errorBag88: ErrorContainer88 = {
+  email: "Wrong Email",
+  uname: "Must be  Capital",
+};
