@@ -69,6 +69,11 @@ const fetchUserData91 = {
 console.log(fetchUserData91);
 // console.log(fetchUserData91?.job?.title);
 
+const userInput91 = undefined;
+
+const storedData91 = userInput91 ?? "DEF";
+console.log(storedData91);
+
 // console.log(add91(2, 1));
 
 // type UnkEmpl91 = Empl91 | Admin91;
