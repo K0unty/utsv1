@@ -13,7 +13,7 @@ console.log(
 // Work Zone
 
 // Creating a class - Making muiltiple departments in a company
-class Department70 {
+abstract class Department70 {
   // Creating a static property
   static fiscalYear = 2020;
 
@@ -22,7 +22,7 @@ class Department70 {
   protected empl: string[] = [];
 
   // Constructor Function - adding the readonly keyword at this construtor
-  constructor(private readonly id: string, public name: string) {
+  constructor(protected readonly id: string, public name: string) {
     // this.id = id;
     // this.name = n;
     // To access the static property , you have to access it using the class name and not this keyword
@@ -35,9 +35,7 @@ class Department70 {
   }
 
   // Methods
-  describe(this: Department70) {
-    console.log(`Dep [${this.id} - ${this.name}]`);
-  }
+  abstract describe(this: Department70): void;
 
   // Addign employee Method
   addEmpl(empl: string) {
@@ -58,18 +56,20 @@ console.log("Maek employee with empl70");
 console.log(empl70, Department70.fiscalYear);
 console.log("------------------");
 
+/////////////////////////////////////////////////////
 // Definign a new department with the class above
-const newDep70 = new Department70("d1", "Acc");
+// const newDep70 = new Department70("d1", "Acc");
 
-newDep70.addEmpl("bin");
-newDep70.addEmpl("Nal");
+// newDep70.addEmpl("bin");
+// newDep70.addEmpl("Nal");
 
-// Adding employee directrly since that variable can be called - Alternative method shouldnt be there
-// newDep70.empl[2] = "hahah";
-newDep70.name = "Fuku";
+// // Adding employee directrly since that variable can be called - Alternative method shouldnt be there
+// // newDep70.empl[2] = "hahah";
+// newDep70.name = "Fuku";
 
-newDep70.describe();
-newDep70.printEmInfo();
+// newDep70.describe();
+// newDep70.printEmInfo();
+//////////////////////////////////////////////////////////
 
 // 66 - Creating specialized departments
 // When inheriting with the extends keyword , you will inherit all from the base class
@@ -78,6 +78,9 @@ class iTDep70 extends Department70 {
   constructor(id: string, admins: string[]) {
     super(id, "IT");
     this.admins = admins;
+  }
+  describe() {
+    console.log("IT Dep - ID:" + this.id);
   }
 }
 
@@ -107,6 +110,11 @@ class AccDep70 extends Department70 {
   constructor(id: string, private reports: string[]) {
     super(id, "IT Accounting");
     this.lastReport = reports[0];
+  }
+
+  // Adding the abstract class here
+  describe() {
+    console.log("AccDep - ID: " + this.id);
   }
 
   addItEmpl(name: string) {
@@ -141,8 +149,10 @@ acc70.addItEmpl("puni");
 acc70.addItEmpl("pauni");
 acc70.printEmInfo();
 
-acc70.addReport("fuked...");
-acc70.prReports();
+// acc70.addReport("fuked...");
+// acc70.prReports();
+console.log("Printing the Describe");
+acc70.describe();
 
 // Getter and setter methods work
 console.log("Getter Propery");
