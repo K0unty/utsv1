@@ -89,8 +89,10 @@ const new_acc71 = new iTDep71("f1", ["boo"]);
 new_acc71.describe();
 console.log(new_acc71);
 
+// Thisis the account department class
 class AccDep71 extends Department71 {
   private lastReport: string;
+  private static instance: AccDep71;
 
   //getter - retrieve value to add complex logic
   get mostRecentReport() {
@@ -107,9 +109,17 @@ class AccDep71 extends Department71 {
     this.addReport(value);
   }
 
-  constructor(id: string, private reports: string[]) {
+  private constructor(id: string, private reports: string[]) {
     super(id, "IT Accounting");
     this.lastReport = reports[0];
+  }
+
+  static getInstance() {
+    if (AccDep71.instance) {
+      return this.instance;
+    }
+    this.instance = new AccDep71("d2", []);
+    return this.instance;
   }
 
   // Adding the abstract class here
@@ -134,7 +144,16 @@ class AccDep71 extends Department71 {
   }
 }
 
-const acc71 = new AccDep71("d2", []);
+// const acc71 = new AccDep71("d2", []);
+const acc71 = AccDep71.getInstance();
+const acc712 = AccDep71.getInstance();
+console.log(`
+Printing the new instance that is instantiated with private constructor 
+`);
+console.log(acc71, acc712);
+console.log(`
+=================
+`);
 
 // Work for 69.ts here
 
