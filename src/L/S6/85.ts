@@ -104,7 +104,7 @@ const v285 = new truck85();
 
 function useVehicle85(vehicle: Vehicle85) {
   vehicle.drive();
-  if ("loadCargo" in vehicle) {
+  if (vehicle instanceof truck85) {
     vehicle.loadCargo(1000);
   }
 }
