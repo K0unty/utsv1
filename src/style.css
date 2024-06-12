@@ -88,13 +88,13 @@ p {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 12rem;
+  padding: 11rem;
   text-align: center;
   /* From https://css.glass */
   background: rgba(15, 14, 14, 0.38);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.5px);
+  backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border: 1px solid rgba(15, 14, 14, 0.3);
 }
