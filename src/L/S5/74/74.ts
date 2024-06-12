@@ -1,9 +1,9 @@
 /* 
-73: A first Interface
+74: using interface and classes
 */
 console.log(
   `
-    %cS5 - 73: A first Interface
+    %cS5 - 74: using interface and classes
     ===========
                   `,
   "color:yellow;font-size:1.2rem"
@@ -12,7 +12,7 @@ console.log(
 // Work Zone
 
 // More like custom type
-interface Person {
+interface Person74 {
   name: string;
   age: number;
 
@@ -21,8 +21,8 @@ interface Person {
 }
 
 // Typecheck an object
-let user1: Person;
-user1 = {
+let user174: Person74;
+user174 = {
   name: "Ina",
   age: 19,
   greet(phrase: String) {
@@ -30,4 +30,4 @@ user1 = {
   },
 };
 
-user1.greet("Hi bastr - I am:");
+user174.greet("Hi bastr - I am:");
