@@ -30,8 +30,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000505;
+  /* background-color: #000505; */
   transition: all 500ms;
+  background-image: url("https://i.ibb.co/Ns6HHR9/image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #0c000c39;
+  background-blend-mode: multiply;
 }
 
 h1 {

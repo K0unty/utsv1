@@ -20,6 +20,8 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: "Anta", sans-serif;
+
+  /* This code for backgrround image */
   background-image: url("https://i.ibb.co/k8c6182/image.png");
   background-size: cover;
   background-position: center;
