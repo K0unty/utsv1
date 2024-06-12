@@ -13,6 +13,23 @@ console.log(
 
 // make another interface
 
+// Custom types
+
+type AddFn78 = (a: number, b: number) => number;
+let add78: AddFn78;
+add78 = (n1: number, n2: number) => {
+  return n1 + n2;
+};
+
+// Inteface Types
+interface AddIFn78 {
+  (a: number, b: number): number;
+}
+let addIFn78: AddIFn78;
+addIFn78 = (n1: number, n2: number) => {
+  return n1 + n2;
+};
+
 interface Named78 {
   readonly name: string;
 }
