@@ -11,11 +11,14 @@ console.log(
 ``;
 // Work Zone
 
-// More like custom type
-interface Greetable77 {
-  readonly name: string;
+// make another interface
 
-  // Adding Methods
+interface Named77 {
+  readonly name: string;
+}
+
+// More like custom type
+interface Greetable77 extends Named77 {
   greet(phrase: string): void;
 }
 
