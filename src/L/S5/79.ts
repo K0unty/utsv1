@@ -30,8 +30,10 @@ addIFn79 = (n1: number, n2: number) => {
   return n1 + n2;
 };
 
+// Optional Params in Interface and properties
 interface Named79 {
-  readonly name: string;
+  readonly name?: string;
+  outputName?: string;
 }
 
 // More like custom type
@@ -41,29 +43,25 @@ interface Greetable79 extends Named79 {
 
 // Interface shared across classes
 class Person79 implements Greetable79 {
-  name: string;
+  name?: string;
   age = 30;
-  constructor(n: string) {
+  constructor(n?: string) {
     this.name = n;
+    if (n) {
+      this.name = n;
+    }
   }
   greet(phrase: string): void {
-    console.log(phrase + " " + this.name);
+    if (this.name) {
+      console.log(phrase + " " + this.name);
+    } else {
+      console.log("Hi BAstard!");
+    }
   }
 }
 
-// // Typecheck an object
-// let user179: Greetable79;
-// user179 = {
-//   name: "Ina",
-
-//   greet(phrase: String) {
-//     console.log(phrase + "  " + this.name);
-//   },
-// };
-
-// user179.greet("Hi bastr - I am:");
 let user179;
-user179 = new Person79("ina");
+user179 = new Person79();
 // user179.name = 'bingo'
 user179.greet("yo ");
 console.log(user179);
