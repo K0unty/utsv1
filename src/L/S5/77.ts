@@ -1,9 +1,9 @@
 /* 
-76: Readonly Interfaces
+77: Extending Interfaces
 */
 console.log(
   `
-    %cS5 - 76: Read only interfaces
+    %cS5 - 77: Extending Interfaces
     ===========
                   `,
   "color:yellow;font-size:1.2rem"
@@ -12,7 +12,7 @@ console.log(
 // Work Zone
 
 // More like custom type
-interface Greetable76 {
+interface Greetable77 {
   readonly name: string;
 
   // Adding Methods
@@ -20,7 +20,7 @@ interface Greetable76 {
 }
 
 // Interface shared across classes
-class Person76 implements Greetable76 {
+class Person77 implements Greetable77 {
   name: string;
   age = 30;
   constructor(n: string) {
@@ -32,8 +32,8 @@ class Person76 implements Greetable76 {
 }
 
 // // Typecheck an object
-// let user176: Greetable76;
-// user176 = {
+// let user177: Greetable77;
+// user177 = {
 //   name: "Ina",
 
 //   greet(phrase: String) {
@@ -41,9 +41,9 @@ class Person76 implements Greetable76 {
 //   },
 // };
 
-// user176.greet("Hi bastr - I am:");
-let user176;
-user176 = new Person76("ina");
-// user176.name = 'bingo'
-user176.greet("yo ");
-console.log(user176);
+// user177.greet("Hi bastr - I am:");
+let user177;
+user177 = new Person77("ina");
+// user177.name = 'bingo'
+user177.greet("yo ");
+console.log(user177);
