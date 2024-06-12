@@ -146,13 +146,19 @@ moveAnimal88({
 // const userInputElement88 = <HTMLInputElement>(
 //   document.getElementById("user-input")!
 // );
-const userInputElement88 = document.getElementById(
-  "user-input"
-)! as HTMLInputElement;
+// const userInputElement88 = document.getElementById(
+//   "user-input"
+// )! as HTMLInputElement;
 
-userInputElement88.value = "FuckOff";
+// userInputElement88.value = "FuckOff";
 
-// if ! is not used you have to do a type check
-if (userInputElement88) {
-  (userInputElement88 as HTMLInputElement).value = "Fuckoff";
+// // if ! is not used you have to do a type check
+// if (userInputElement88) {
+//   (userInputElement88 as HTMLInputElement).value = "Fuckoff";
+// }
+
+// 88 Work there -
+
+interface ErrorContainer88 {
+  // Error object identifier - { email: not valid, username: 'Start with char'}
 }
