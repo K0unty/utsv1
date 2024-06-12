@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #120101;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,7 +37,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-color: #0c000c39;
+  background-color: #0c000cea;
   background-blend-mode: multiply;
 }
 
