@@ -1,9 +1,9 @@
 /* 
-74: using interface and classes
+75: Why Interfaces?
 */
 console.log(
   `
-    %cS5 - 74: using interface and classes
+    %cS5 - 75: Why Interfaces?
     ===========
                   `,
   "color:yellow;font-size:1.2rem"
@@ -12,7 +12,7 @@ console.log(
 // Work Zone
 
 // More like custom type
-interface Greetable74 {
+interface Greetable75 {
   name: string;
 
   // Adding Methods
@@ -20,7 +20,7 @@ interface Greetable74 {
 }
 
 // Interface shared across classes
-class Person74 implements Greetable74 {
+class Person75 implements Greetable75 {
   name: string;
   age = 30;
   constructor(n: string) {
@@ -32,8 +32,8 @@ class Person74 implements Greetable74 {
 }
 
 // // Typecheck an object
-// let user174: Greetable74;
-// user174 = {
+// let user175: Greetable75;
+// user175 = {
 //   name: "Ina",
 
 //   greet(phrase: String) {
@@ -41,8 +41,8 @@ class Person74 implements Greetable74 {
 //   },
 // };
 
-// user174.greet("Hi bastr - I am:");
-let user174;
-user174 = new Person74("ina");
-user174.greet("yo ");
-console.log(user174);
+// user175.greet("Hi bastr - I am:");
+let user175;
+user175 = new Person75("ina");
+user175.greet("yo ");
+console.log(user175);
