@@ -4,11 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(
-    179.7deg,
-    rgba(38, 2, 33, 0.906) 1.1%,
-    rgba(22, 0, 98, 1) 99%
-  );
+
   color: #f59e0b;
   transition: all 300ms;
 }
@@ -20,6 +16,11 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: "Anta", sans-serif;
+  background-image: linear-gradient(
+    179.7deg,
+    rgba(38, 2, 33, 0.906) 1.1%,
+    rgba(22, 0, 98, 1) 99%
+  );
 
   /* This code for backgrround image */
   background-image: url("https://i.ibb.co/9tcFVv5/image.png");
@@ -91,4 +92,22 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+#console-output {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.466);
+  color: #ffd933;
+  font-size: 16px;
+  font-family: sans-serif;
+  z-index: 999;
+}
+.console-message {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
