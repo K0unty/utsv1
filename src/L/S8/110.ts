@@ -1,5 +1,5 @@
 /* 
-110: Woring with decorator factories
+110: Diving into property decorators
 */
 
 // helper function
@@ -12,7 +12,7 @@ const blaConsTxt = function (text: string) {
 
 console.log(
   `
-  %cS8 - 110: Woring with decorator factories `,
+  %cS8 - 110: Diving into property decorators `,
   "background: linear-gradient(to right, rgba(38, 2, 33, 0.906) 47%, rgba(22, 0, 103, 1) 89%); color:#FFD933; font-size: 24px; padding: 10px;font-style:italic"
 );
 
@@ -55,3 +55,33 @@ class Person110 {
 blaConsTxt("Print person110");
 const pers110 = new Person110();
 console.log(pers110);
+
+// 110: work ---
+
+function Log110(target: any, propertyName: string | Symbol) {
+  console.log("Property Decorator");
+  console.log(target, propertyName);
+}
+
+class Product110 {
+  @Log110
+  title: string;
+  private _price: number;
+
+  set price(val: number) {
+    if (val > 0) {
+      this._price = val;
+    } else {
+      throw new Error("Invalid - Shoudl be Positive Number");
+    }
+  }
+
+  constructor(t: string, p: number) {
+    this.title = t;
+    this._price = p;
+  }
+
+  getPriceWithTax(tax: number) {
+    return this._price * (1 + tax);
+  }
+}
