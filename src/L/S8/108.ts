@@ -27,7 +27,20 @@ function Logger108(logString: string) {
   };
 }
 
-@Logger108("LOGGING - PERSON")
+// new decorator factory
+function WithTemplate108(template: string, hookID: string) {
+  return function (constructor: any) {
+    const hookEl = document.getElementById(hookID);
+    const p108 = new constructor();
+    if (hookEl) {
+      hookEl.innerHTML = template;
+      hookEl.querySelector("p")!.textContent = p108.name;
+    }
+  };
+}
+
+// @Logger108("LOGGING - PERSON")
+@WithTemplate108("<p> MyObject - From Decorator Factory </p>", "app108")
 class Person108 {
   name = "Ina";
 
