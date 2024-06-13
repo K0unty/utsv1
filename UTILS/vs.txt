@@ -19,5 +19,6 @@
   "workbench.colorTheme": "Obsidian Dark",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.lineHeight": 1.5,
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono"
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontSize": 15
 }
