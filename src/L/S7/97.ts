@@ -38,17 +38,17 @@ console.log(
 This function is different from the lesson , due to some issues the new syntax is 
 type parameters T and U using the extends keyword. The constraint extends object ensures that T and U must be objects. This is because the Object.assign method only works with objects, and we want to ensure that the function is used correctly.
 */
-function merge97<T extends object, U extends object, V extends object>(
-  objA: T,
-  objB: U,
-  objC: V
-) {
-  return Object.assign(objA, objB, objC);
+function merge97<T extends object, U extends object>(objA: T, objB: U) {
+  return Object.assign(objA, objB);
 }
 
-const meOb97 = merge97(
-  { name: "Nip" },
-  { hobbies: ["cooking"] },
-  { age: "20" }
-);
+const meOb97 = merge97({ name: "Nip", hobbies: ["cooking"] }, { age: 30 });
 console.log(meOb97);
+
+console.log(
+  `%c
+Printing Parts of object
+`,
+  "background:black"
+);
+console.log(meOb97.age);
