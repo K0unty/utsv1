@@ -4,15 +4,14 @@
 
 // helper function
 
-// Since this has already been declaredred in 99.ts no need to call it back and available on all files now
-// const blackConsoleText = function (text: string) {
-//   console.log(
-//     `
-// %c${text}
-// `,
-//     "background:black"
-//   );
-// };
+const blackConsoleText = function (text: string) {
+  console.log(
+    `
+%c${text}
+`,
+    "background:black"
+  );
+};
 
 // ---
 
