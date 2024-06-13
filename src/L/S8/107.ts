@@ -1,5 +1,5 @@
 /* 
-107: A first Class Decorator
+107: Woring with decorator factories
 */
 
 // helper function
@@ -12,7 +12,7 @@ const blaConsTxt = function (text: string) {
 
 console.log(
   `
-  %cS8 - 107: A first Class Decorator `,
+  %cS8 - 107: Woring with decorator factories `,
   "background: linear-gradient(to right, rgba(38, 2, 33, 0.906) 47%, rgba(22, 0, 103, 1) 89%); color:#FFD933; font-size: 24px; padding: 10px;font-style:italic"
 );
 
@@ -20,12 +20,14 @@ console.log(
 
 // Decorators are for classes they are functions
 
-function Logger107(constructor: Function) {
-  console.log("Logging...");
-  console.log(constructor);
+function Logger107(logString: string) {
+  return function (constructor: Function) {
+    console.log(logString);
+    console.log(constructor);
+  };
 }
 
-@Logger107
+@Logger107("LOGGING - PERSON")
 class Person107 {
   name = "Ina";
 
