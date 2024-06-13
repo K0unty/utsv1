@@ -99,3 +99,39 @@ function extractAndConvert100<T extends object, U extends keyof T>(
 
 blackConsoleText("Printing extractandConvert");
 extractAndConvert100({ name: "boing" }, "name");
+
+//100.ts Work - Generic classes
+class Storage100<T extends string | number | boolean> {
+  private data: T[] = [];
+
+  addItem(item: T) {
+    this.data.push(item);
+  }
+
+  removeItem(item: T) {
+    if (this.data.indexOf(item) === -1) {
+      return;
+    }
+    this.data.splice(this.data.indexOf(item), 1);
+  }
+
+  getItems() {
+    return [...this.data];
+  }
+}
+blackConsoleText("Print Storage100 Class");
+const textStorage100 = new Storage100<string>();
+textStorage100.addItem("Ima");
+textStorage100.addItem("loi");
+textStorage100.removeItem("loi");
+console.log(textStorage100.getItems());
+
+const numSto100 = new Storage100<number>();
+
+// const objSto100 = new Storage100<object>();
+// const lioObj = { name: "Lio" };
+// objSto100.addItem({ name: "Lio" });
+// objSto100.addItem({ name: "Gon" });
+// objSto100.removeItem({ name: "Lio" });
+// blackConsoleText("Stroage100 Generic Clas");
+// console.log(objSto100.getItems());
