@@ -4,7 +4,7 @@
 
 // helper function
 
-const blackConsoleText = function (text: string) {
+const blaConsTxt = function (text: string) {
   console.log(
     `
   %c${text}
