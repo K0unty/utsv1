@@ -54,3 +54,28 @@ Printing Parts of object
 console.log(meOb98.age);
 
 // 98: Another generic function
+// Count and print function
+
+interface Lengthy {
+  length: number;
+}
+
+function countAndDesc98<T extends Lengthy>(element: T): [T, string] {
+  let descriptionText = "Got No Val";
+  if (element.length === 1) {
+    descriptionText = "Got 1 Element";
+  } else if (element.length > 1) {
+    descriptionText = "Got " + element.length + " elements. ";
+  }
+  return [element, descriptionText];
+}
+console.log(
+  `%c
+Printing countAnDesc09 Function
+`,
+  "background:black"
+);
+console.log(meOb98.age);
+
+console.log(countAndDesc98("Whatuo"));
+console.log(countAndDesc98(["Sports", "Cooking"]));
