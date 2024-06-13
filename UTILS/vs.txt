@@ -14,7 +14,9 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "workbench.iconTheme": "simple-icons",
   "editor.stickyScroll.enabled": true,
-  "workbench.colorTheme": "Obsidian Dark",
   "terminal.integrated.cursorWidth": 2,
-  "editor.cursorBlinking": "expand"
+  "editor.cursorBlinking": "expand",
+  "workbench.colorTheme": "Obsidian Dark",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.lineHeight": 1.5
 }

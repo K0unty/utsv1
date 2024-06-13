@@ -12,18 +12,6 @@ console.log(
   "background: linear-gradient(to right, rgba(38, 2, 33, 0.906) 55%, rgba(22, 0, 98, 1) 89%); color:#FFD933; font-size: 24px; padding: 10px;"
 );
 
-// Define a function to append messages to the console output div
-function logToConsole(message: string, style: string) {
-  console.log(`%c${message}`, style);
-  const consoleOutputDiv = document.getElementById("console-output");
-  if (consoleOutputDiv) {
-    const messageElement = document.createElement("div");
-    messageElement.style.cssText = style;
-    messageElement.textContent = message;
-    consoleOutputDiv.appendChild(messageElement);
-  }
-}
-
 // Actual work her
 
 // Default type which also a generic
@@ -44,3 +32,23 @@ function logToConsole(message: string, style: string) {
 // });
 
 //96 - Work here
+
+// Function that merges two objects and returns an object
+/* 
+This function is different from the lesson , due to some issues the new syntax is 
+type parameters T and U using the extends keyword. The constraint extends object ensures that T and U must be objects. This is because the Object.assign method only works with objects, and we want to ensure that the function is used correctly.
+*/
+function merge96<T extends object, U extends object, V extends object>(
+  objA: T,
+  objB: U,
+  objC: V
+) {
+  return Object.assign(objA, objB, objC);
+}
+
+const meOb96 = merge96(
+  { name: "Nip" },
+  { hobbies: ["cooking"] },
+  { age: "20" }
+);
+console.log(meOb96);
