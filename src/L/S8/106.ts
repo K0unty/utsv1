@@ -5,12 +5,7 @@
 // helper function
 
 const blaConsTxt = function (text: string) {
-  console.log(
-    `
-  %c${text}
-  `,
-    "background:black"
-  );
+  console.log(`%c${text} `, "background:black;font-size:16px");
 };
 
 // ---
@@ -22,3 +17,16 @@ console.log(
 );
 
 // Actual work her
+
+// Decorators are for classes
+
+class Person106 {
+  name = "Ina";
+
+  constructor() {
+    console.log("Creating person Object...");
+  }
+}
+blaConsTxt("Print person106");
+const pers106 = new Person106();
+console.log(pers106);
