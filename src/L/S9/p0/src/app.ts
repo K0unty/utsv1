@@ -1,5 +1,6 @@
 // Code goes here!
 
+// Project Input - Fro rendering the form using TS
 class ProjectInput {
   templateElement: HTMLTemplateElement;
   hostElement: HTMLDivElement;
@@ -16,6 +17,7 @@ class ProjectInput {
       true
     );
     this.element = importedNode.firstElementChild as HTMLFormElement;
+    this.element.id = "user-input";
     this.attach();
   }
 

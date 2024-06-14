@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Russo+One&family=Cookie&family=Rajdhani&display=swap");
+
 * {
   box-sizing: border-box;
+  transition: all 300ms;
 }
 
 html {
@@ -8,6 +11,13 @@ html {
 
 body {
   margin: 0;
+  background-image: url("https://i.ibb.co/f085KGj/image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #21021f;
+  background-blend-mode: multiply;
 }
 
 label,
@@ -18,6 +28,8 @@ textarea {
 }
 
 label {
+  font-family: Rajdhani;
+  color: #ccb8f2;
   font-weight: bold;
 }
 
@@ -123,5 +135,32 @@ button:active {
   margin: 1rem;
   padding: 1rem;
   border: 1px solid #ff0062;
-  background: #f7f7f7;
+  background: #21021f;
+}
+
+/* MyStyling */
+h1 {
+  font-family: "Courgette";
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  transition: all 600ms;
+}
+h1:hover {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=370170&c2=ccb8f2&gt=l&gd=dtl
+*/
+  background: linear-gradient(135deg, #370170, #ccb8f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
 }
