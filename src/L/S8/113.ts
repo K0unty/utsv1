@@ -1,5 +1,5 @@
 /* 
-113: Accessor & Parameter Decorators
+113: Returning (Changing) a Class in a Class Decorator 
 */
 
 // helper function
@@ -12,7 +12,7 @@ const blaConsTxt = function (text: string) {
 
 console.log(
   `
-  %cS8 - 113: Accessor & Parameter Decorators `,
+  %cS8 - 113: Returning (Changing) a Class in a Class Decorator  `,
   "background: linear-gradient(to right, rgba(38, 2, 33, 0.906) 47%, rgba(22, 0, 103, 1) 89%); color:#FFD933; font-size: 24px; padding: 10px;font-style:italic"
 );
 
@@ -30,15 +30,21 @@ function Logger113(logString: string) {
 
 // new decorator factory
 function WithTemplate113(template: string, hookID: string) {
-  return function (constructor: any) {
+  return function <T extends { new (...args: any[]): { name: string } }>(
+    originalConstructor: T
+  ) {
     blaConsTxt("TEMPLATE FACTORY");
-    console.log("TEMPLATE FACTORY");
-    const hookEl = document.getElementById(hookID);
-    const p113 = new constructor();
-    if (hookEl) {
-      hookEl.innerHTML = template;
-      hookEl.querySelector("p")!.textContent = p113.name;
-    }
+    return class extends originalConstructor {
+      constructor(..._: any[]) {
+        super();
+        console.log("TEMPLATE FACTORY");
+        const hookEl = document.getElementById(hookID);
+        if (hookEl) {
+          hookEl.innerHTML = template;
+          hookEl.querySelector("p")!.textContent = this.name;
+        }
+      }
+    };
   };
 }
 
@@ -114,6 +120,6 @@ class Product113 {
   }
 }
 
-// 113
+// 113 - Work
 const p1_113 = new Product113("Book", 20);
 const p2_113 = new Product113("Book", 30);
