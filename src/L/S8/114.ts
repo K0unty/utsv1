@@ -1,18 +1,18 @@
 /* 
-113: Returning (Changing) a Class in a Class Decorator 
+114: Other Decorator Return Types
 */
 
 // helper function
 
-const blaConsTxt113 = function (text: string) {
+const blaConsTxt114 = function (text: string) {
   console.log(`%c${text} `, "background:black;font-size:16px");
 };
 
 // ---
 
 console.log(
-  `
-  %cS8 - 113: Returning (Changing) a Class in a Class Decorator  `,
+  `%c
+S8- 114: Other Decorator Return Types `,
   "background: linear-gradient(to right, rgba(38, 2, 33, 0.906) 47%, rgba(22, 0, 103, 1) 89%); color:#FFD933; font-size: 24px; padding: 10px;font-style:italic"
 );
 
@@ -20,8 +20,8 @@ console.log(
 
 // Decorators are for classes they are functions
 
-function Logger113(logString: string) {
-  blaConsTxt113("Logger Factory");
+function Logger114(logString: string) {
+  blaConsTxt114("Logger Factory");
   return function (constructor: Function) {
     console.log(logString);
     console.log(constructor);
@@ -29,11 +29,11 @@ function Logger113(logString: string) {
 }
 
 // new decorator factory
-function WithTemplate113(template: string, hookID: string) {
+function WithTemplate114(template: string, hookID: string) {
   return function <T extends { new (...args: any[]): { name: string } }>(
     originalConstructor: T
   ) {
-    blaConsTxt113("TEMPLATE FACTORY");
+    blaConsTxt114("TEMPLATE FACTORY");
     return class extends originalConstructor {
       constructor(..._: any[]) {
         super();
@@ -48,59 +48,59 @@ function WithTemplate113(template: string, hookID: string) {
   };
 }
 
-// @Logger113("LOGGING - PERSON")
-@Logger113("LOGGIN 113")
-@WithTemplate113("<p> MyObject - From Decorator Factory </p>", "app113")
-class Person113 {
+// @Logger114("LOGGING - PERSON")
+@Logger114("LOGGIN 114")
+@WithTemplate114("<p> MyObject - From Decorator Factory </p>", "app114")
+class Person114 {
   name = "Ina";
 
   constructor() {
     console.log("Creating person Object...");
   }
 }
-blaConsTxt113("Print person113");
-const pers113 = new Person113();
-console.log(pers113);
+blaConsTxt114("Print person114");
+const pers114 = new Person114();
+console.log(pers114);
 
-// 113: work ---
+// 114: work ---
 
 // Followign LOG functions are all decorators
-function Log113(target: any, propertyName: string | Symbol) {
+function Log114(target: any, propertyName: string | Symbol) {
   console.log("Property Decorator");
   console.log(target, propertyName);
 }
-function Log2113(target: any, name: string, descriptor: PropertyDescriptor) {
-  blaConsTxt113("Print Log211 Decorator");
+function Log2114(target: any, name: string, descriptor: PropertyDescriptor) {
+  blaConsTxt114("Print Log211 Decorator");
   console.log("Accessor Decorator");
   console.log(target);
   console.log(name);
   console.log(descriptor);
 }
-function Log3113(
+function Log3114(
   target: any,
   name: string | symbol,
   descriptor: PropertyDescriptor
 ) {
-  blaConsTxt113("Pritn Method Decorator");
+  blaConsTxt114("Pritn Method Decorator");
   console.log("Method Decorator");
   console.log(target);
   console.log(name);
   console.log(descriptor);
 }
-function Log4113(target: any, name: string | Symbol, position: number) {
-  blaConsTxt113("Pring Parameter Decorator");
+function Log4114(target: any, name: string | Symbol, position: number) {
+  blaConsTxt114("Pring Parameter Decorator");
   console.log("Parameter Decorator");
   console.log(target);
   console.log(name);
   console.log(position);
 }
 
-class Product113 {
-  @Log113
+class Product114 {
+  @Log114
   title: string;
   private _price: number;
 
-  @Log2113
+  @Log2114
   set price(val: number) {
     if (val > 0) {
       this._price = val;
@@ -114,12 +114,12 @@ class Product113 {
     this._price = p;
   }
 
-  @Log3113
-  getPriceWithTax(@Log4113 tax: number) {
+  @Log3114
+  getPriceWithTax(@Log4114 tax: number) {
     return this._price * (1 + tax);
   }
 }
 
-// 113 - Work
-const p1_113 = new Product113("Book", 20);
-const p2_113 = new Product113("Book", 30);
+// 114 - Work
+const p1_114 = new Product114("Book", 20);
+const p2_114 = new Product114("Book", 30);
