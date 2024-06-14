@@ -123,3 +123,15 @@ class Product115 {
 // 115 - Work
 const p1_115 = new Product115("Book", 20);
 const p2_115 = new Product115("Book", 30);
+
+class Printer115 {
+  message = "This Works!";
+
+  showMessage() {
+    console.log(this.message);
+  }
+}
+
+const p115 = new Printer115();
+const button115 = document.querySelector(".ClickMe")!;
+button115.addEventListener("click", p115.showMessage);
