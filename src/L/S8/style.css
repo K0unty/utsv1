@@ -130,5 +130,5 @@ input {
   font-size: large;
 }
 input:hover {
-  box-shadow: 0 0 20px rgb(249, 139, 255), 0 0 40px rgba(8, 88, 127, 1);
+  box-shadow: 0 0 20px rgb(249, 139, 255), 0 0 40px rgb(127, 8, 109);
 }
