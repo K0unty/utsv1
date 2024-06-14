@@ -85,7 +85,11 @@ button {
   transition: border-color 0.25s;
   transition: all 500ms;
 }
+button:active {
+  transform: translateY(15px) scale(0.95);
+}
 button:hover {
+  box-shadow: 0 0 20px rgb(249, 139, 255), 0 0 40px rgba(8, 88, 127, 1);
   border-color: #646cff;
   padding: 20px;
 }

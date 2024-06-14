@@ -140,8 +140,12 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+button:active {
+  transform: translateY(15px) scale(0.95);
+}
 button:hover {
   border-color: #646cff;
+  box-shadow: 0 0 20px rgb(249, 139, 255), 0 0 40px rgba(8, 88, 127, 1);
 }
 button:focus,
 button:focus-visible {
