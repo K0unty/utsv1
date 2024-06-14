@@ -162,12 +162,14 @@ const registeredValidators_117: ValidatorConfig = {};
 
 function Required_117(target: any, propName: string) {
   registeredValidators_117[target.constructor.name] = {
+    ...registeredValidators_117[target.constructor.name],
     [propName]: ["required"],
   };
 }
 
 function PositiveNumber_117(target: any, propName: string) {
   registeredValidators_117[target.constructor.name] = {
+    ...registeredValidators_117[target.constructor.name],
     [propName]: ["positive"],
   };
 }
@@ -177,17 +179,20 @@ function validate_117(obj: any) {
   if (!objValidatorConfig) {
     return true;
   }
+  let isValid = true;
   for (const prop in objValidatorConfig) {
     for (const validator of objValidatorConfig[prop]) {
       switch (validator) {
         case "required":
-          return !!obj[prop]; // !! convert to real truth value
+          isValid = isValid && !!obj[prop]; // !! convert to real truth value
+          break;
         case "positive":
-          return obj[prop] > 0;
+          isValid = isValid && obj[prop] > 0;
+          break;
       }
     }
   }
-  return true;
+  return isValid;
 }
 
 class Course_117 {
