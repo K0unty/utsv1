@@ -149,3 +149,14 @@ class Printer116 {
 const p116 = new Printer116();
 const button116 = document.querySelector(".ClickMe")!;
 button116.addEventListener("click", p116.showMessage);
+
+// 116 - Decorators for Validation
+class Course_116 {
+  title: string;
+  price: number;
+
+  constructor(t: string, p: number) {
+    this.title = t;
+    this.price = p;
+  }
+}
