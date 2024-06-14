@@ -1,10 +1,10 @@
 /* 
-116: Decorator Example: Creating and “AutoBind” Decoratorpes
+117: Validation and Decorators Finished
 */
 
 // helper function
 
-const blaConsTxt116 = function (text: string) {
+const blaConsTxt117 = function (text: string) {
   console.log(`%c${text} `, "background:black;font-size:16px");
 };
 
@@ -12,7 +12,7 @@ const blaConsTxt116 = function (text: string) {
 
 console.log(
   `%c
-S8- 116: Decorator Example: Creating and “AutoBind” Decorator `,
+S8- 117: Validation and Decorators Finished `,
   "background: linear-gradient(to right, rgba(38, 2, 33, 0.906) 47%, rgba(22, 0, 103, 1) 89%); color:#FFD933; font-size: 24px; padding: 10px;font-style:italic"
 );
 
@@ -20,8 +20,8 @@ S8- 116: Decorator Example: Creating and “AutoBind” Decorator `,
 
 // Decorators are for classes they are functions
 
-function Logger116(logString: string) {
-  blaConsTxt116("Logger Factory");
+function Logger117(logString: string) {
+  blaConsTxt117("Logger Factory");
   return function (constructor: Function) {
     console.log(logString);
     console.log(constructor);
@@ -29,11 +29,11 @@ function Logger116(logString: string) {
 }
 
 // new decorator factory
-function WithTemplate116(template: string, hookID: string) {
+function WithTemplate117(template: string, hookID: string) {
   return function <T extends { new (...args: any[]): { name: string } }>(
     originalConstructor: T
   ) {
-    blaConsTxt116("TEMPLATE FACTORY");
+    blaConsTxt117("TEMPLATE FACTORY");
     return class extends originalConstructor {
       constructor(..._: any[]) {
         super();
@@ -48,59 +48,59 @@ function WithTemplate116(template: string, hookID: string) {
   };
 }
 
-// @Logger116("LOGGING - PERSON")
-@Logger116("LOGGIN 116")
-@WithTemplate116("<p> MyObject - From Decorator Factory </p>", "app116")
-class Person116 {
+// @Logger117("LOGGING - PERSON")
+@Logger117("LOGGIN 117")
+@WithTemplate117("<p> MyObject - From Decorator Factory </p>", "app117")
+class Person117 {
   name = "Ina";
 
   constructor() {
     console.log("Creating person Object...");
   }
 }
-blaConsTxt116("Print person116");
-const pers116 = new Person116();
-console.log(pers116);
+blaConsTxt117("Print person117");
+const pers117 = new Person117();
+console.log(pers117);
 
-// 116: work ---
+// 117: work ---
 
 // Followign LOG functions are all decorators
-function Log116(target: any, propertyName: string | Symbol) {
+function Log117(target: any, propertyName: string | Symbol) {
   console.log("Property Decorator");
   console.log(target, propertyName);
 }
-function Log2116(target: any, name: string, descriptor: PropertyDescriptor) {
-  blaConsTxt116("Print Log211 Decorator");
+function Log2117(target: any, name: string, descriptor: PropertyDescriptor) {
+  blaConsTxt117("Print Log211 Decorator");
   console.log("Accessor Decorator");
   console.log(target);
   console.log(name);
   console.log(descriptor);
 }
-function Log3116(
+function Log3117(
   target: any,
   name: string | symbol,
   descriptor: PropertyDescriptor
 ) {
-  blaConsTxt116("Pritn Method Decorator");
+  blaConsTxt117("Pritn Method Decorator");
   console.log("Method Decorator");
   console.log(target);
   console.log(name);
   console.log(descriptor);
 }
-function Log4116(target: any, name: string | Symbol, position: number) {
-  blaConsTxt116("Pring Parameter Decorator");
+function Log4117(target: any, name: string | Symbol, position: number) {
+  blaConsTxt117("Pring Parameter Decorator");
   console.log("Parameter Decorator");
   console.log(target);
   console.log(name);
   console.log(position);
 }
 
-class Product116 {
-  @Log116
+class Product117 {
+  @Log117
   title: string;
   private _price: number;
 
-  @Log2116
+  @Log2117
   set price(val: number) {
     if (val > 0) {
       this._price = val;
@@ -114,17 +114,17 @@ class Product116 {
     this._price = p;
   }
 
-  @Log3116
-  getPriceWithTax(@Log4116 tax: number) {
+  @Log3117
+  getPriceWithTax(@Log4117 tax: number) {
     return this._price * (1 + tax);
   }
 }
 
-// 116 - Work
-const p1_116 = new Product116("Book", 20);
-const p2_116 = new Product116("Book", 30);
+// 117 - Work
+const p1_117 = new Product117("Book", 20);
+const p2_117 = new Product117("Book", 30);
 
-function AutoBind_116(_: any, _2: string, descriptor: PropertyDescriptor) {
+function AutoBind_117(_: any, _2: string, descriptor: PropertyDescriptor) {
   const originalMethod = descriptor.value;
   const adjDescriptor: PropertyDescriptor = {
     configurable: true,
@@ -137,32 +137,47 @@ function AutoBind_116(_: any, _2: string, descriptor: PropertyDescriptor) {
   return adjDescriptor;
 }
 
-class Printer116 {
+class Printer117 {
   message = "This Works!";
 
-  @AutoBind_116
+  @AutoBind_117
   showMessage() {
     console.log(this.message);
   }
 }
 
-const p116 = new Printer116();
-const button116 = document.querySelector(".ClickMe")!;
-button116.addEventListener("click", p116.showMessage);
+const p117 = new Printer117();
+const button117 = document.querySelector(".ClickMe")!;
+button117.addEventListener("click", p117.showMessage);
 
-// 116 - Decorators for Validation
+// 117 - Decorators for Validation
 
-function Required_116() {}
+interface ValidatorConfig {
+  [property: string]: {
+    [validatableProp: string]: string[]; // ['required, 'positive']
+  };
+}
 
-function PositiveNumber_116() {}
+const registeredValidators_117: ValidatorConfig = {};
 
-function validate_116(obj: object) {}
+function Required_117(target: any, propName: string) {
+  registeredValidators_117[target.constructor.name] = {
+    [propName]: ["required"],
+  };
+}
 
-class Course_116 {
-  @Required_116
+function PositiveNumber_117(target: any, propName: string) {
+  registeredValidators_117[target.constructor.name] = {
+    [propName]: ["positive"],
+}
+
+function validate_117(obj: object) {}
+
+class Course_117 {
+  @Required_117
   title: string;
 
-  @PositiveNumber_116
+  @PositiveNumber_117
   price: number;
 
   constructor(t: string, p: number) {
@@ -171,8 +186,8 @@ class Course_116 {
   }
 }
 
-const courseForm_116 = document.querySelector("form")!;
-courseForm_116.addEventListener("submit", (e) => {
+const courseForm_117 = document.querySelector("form")!;
+courseForm_117.addEventListener("submit", (e) => {
   e.preventDefault();
   const titleEl = document.getElementById("title") as HTMLInputElement;
   const priceEl = document.getElementById("price") as HTMLInputElement;
@@ -180,9 +195,9 @@ courseForm_116.addEventListener("submit", (e) => {
   const title = titleEl.value;
   const price = +priceEl.value;
 
-  const createdCourse = new Course_116(title, price);
+  const createdCourse = new Course_117(title, price);
 
-  if (!validate_116(createdCourse)) {
+  if (!validate_117(createdCourse)) {
     alert("FuckYou");
     return;
   }
