@@ -152,17 +152,17 @@ button116.addEventListener("click", p116.showMessage);
 
 // 116 - Decorators for Validation
 
-// function Required_116() {}
+function Required_116() {}
 
-// function PositiveNumber_116() {}
+function PositiveNumber_116() {}
 
-// function validate_116(obj: object) {}
+function validate_116(obj: object) {}
 
 class Course_116 {
-  // @Required_116
+  @Required_116
   title: string;
 
-  // @PositiveNumber_116
+  @PositiveNumber_116
   price: number;
 
   constructor(t: string, p: number) {
