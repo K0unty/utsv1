@@ -160,3 +160,16 @@ class Course_116 {
     this.price = p;
   }
 }
+
+const courseForm_116 = document.querySelector("form")!;
+courseForm_116.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const titleEl = document.getElementById("title") as HTMLInputElement;
+  const priceEl = document.getElementById("price") as HTMLInputElement;
+
+  const title = titleEl.value;
+  const price = +priceEl.value;
+
+  const createdCourse = new Course_116(title, price);
+  console.log(createdCourse);
+});
