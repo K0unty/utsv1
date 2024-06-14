@@ -113,3 +113,7 @@ class Product112 {
     return this._price * (1 + tax);
   }
 }
+
+// 112
+const p1_112 = new Product112("Book", 20);
+const p2_112 = new Product112("Book", 30);
