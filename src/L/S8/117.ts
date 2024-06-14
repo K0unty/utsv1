@@ -170,46 +170,53 @@ function PositiveNumber_117(target: any, propName: string) {
   registeredValidators_117[target.constructor.name] = {
     [propName]: ["positive"],
   };
+}
 
-  function validate_117(obj: object) {
-    const objValidatorConfig = registeredValidators_117[obj.constructor.name];
-    if (!objValidatorConfig) {
-      return true;
-    }
-    for (const prop in objValidatorConfig) {
-      for (const validator of objValidatorConfig[prop]) {
+function validate_117(obj: any) {
+  const objValidatorConfig = registeredValidators_117[obj.constructor.name];
+  if (!objValidatorConfig) {
+    return true;
+  }
+  for (const prop in objValidatorConfig) {
+    for (const validator of objValidatorConfig[prop]) {
+      switch (validator) {
+        case "required":
+          return !!obj[prop]; // !! convert to real truth value
+        case "positive":
+          return obj[prop] > 0;
       }
     }
   }
-
-  class Course_117 {
-    @Required_117
-    title: string;
-
-    @PositiveNumber_117
-    price: number;
-
-    constructor(t: string, p: number) {
-      this.title = t;
-      this.price = p;
-    }
-  }
-
-  const courseForm_117 = document.querySelector("form")!;
-  courseForm_117.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const titleEl = document.getElementById("title") as HTMLInputElement;
-    const priceEl = document.getElementById("price") as HTMLInputElement;
-
-    const title = titleEl.value;
-    const price = +priceEl.value;
-
-    const createdCourse = new Course_117(title, price);
-
-    if (!validate_117(createdCourse)) {
-      alert("FuckYou");
-      return;
-    }
-    console.log(createdCourse);
-  });
+  return true;
 }
+
+class Course_117 {
+  @Required_117
+  title: string;
+
+  @PositiveNumber_117
+  price: number;
+
+  constructor(t: string, p: number) {
+    this.title = t;
+    this.price = p;
+  }
+}
+
+const courseForm_117 = document.querySelector("form")!;
+courseForm_117.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const titleEl = document.getElementById("title") as HTMLInputElement;
+  const priceEl = document.getElementById("price") as HTMLInputElement;
+
+  const title = titleEl.value;
+  const price = +priceEl.value;
+
+  const createdCourse = new Course_117(title, price);
+
+  if (!validate_117(createdCourse)) {
+    alert("FuckYou");
+    return;
+  }
+  console.log(createdCourse);
+});
