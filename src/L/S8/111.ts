@@ -58,9 +58,35 @@ console.log(pers111);
 
 // 111: work ---
 
+// Followign LOG functions are all decorators
 function Log111(target: any, propertyName: string | Symbol) {
   console.log("Property Decorator");
   console.log(target, propertyName);
+}
+function Log2111(target: any, name: string, descriptor: PropertyDescriptor) {
+  blaConsTxt("Print Log211 Decorator");
+  console.log("Accessor Decorator");
+  console.log(target);
+  console.log(name);
+  console.log(descriptor);
+}
+function Log3111(
+  target: any,
+  name: string | symbol,
+  descriptor: PropertyDescriptor
+) {
+  blaConsTxt("Pritn Method Decorator");
+  console.log("Method Decorator");
+  console.log(target);
+  console.log(name);
+  console.log(descriptor);
+}
+function Log4111(target: any, name: string | Symbol, position: number) {
+  blaConsTxt("Pring Parameter Decorator");
+  console.log("Parameter Decorator");
+  console.log(target);
+  console.log(name);
+  console.log(position);
 }
 
 class Product111 {
@@ -68,6 +94,7 @@ class Product111 {
   title: string;
   private _price: number;
 
+  @Log2111
   set price(val: number) {
     if (val > 0) {
       this._price = val;
@@ -81,7 +108,8 @@ class Product111 {
     this._price = p;
   }
 
-  getPriceWithTax(tax: number) {
+  @Log3111
+  getPriceWithTax(@Log4111 tax: number) {
     return this._price * (1 + tax);
   }
 }
