@@ -118,6 +118,9 @@ button:focus-visible {
 }
 
 /* Form Section */
+form {
+  padding: 15px;
+}
 input {
   font-family: Rajdhani;
   padding: 10px;
