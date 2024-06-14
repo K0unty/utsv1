@@ -163,14 +163,20 @@ const registeredValidators_117: ValidatorConfig = {};
 function Required_117(target: any, propName: string) {
   registeredValidators_117[target.constructor.name] = {
     ...registeredValidators_117[target.constructor.name],
-    [propName]: ["required"],
+    [propName]: [
+      ...(registeredValidators_117[target.constructor.name]?.[propName] ?? []),
+      "required",
+    ],
   };
 }
 
 function PositiveNumber_117(target: any, propName: string) {
   registeredValidators_117[target.constructor.name] = {
     ...registeredValidators_117[target.constructor.name],
-    [propName]: ["positive"],
+    [propName]: [
+      ...(registeredValidators_117[target.constructor.name]?.[propName] ?? []),
+      "positive",
+    ],
   };
 }
 
