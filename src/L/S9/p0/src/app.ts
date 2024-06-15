@@ -82,6 +82,8 @@ class ProjectList {
     this.renderContent();
   }
 
+  addProject() {}
+
   private renderContent() {
     const listId = `${this.type}-projects-list`;
     this.element.querySelector("ul")!.id = listId;
