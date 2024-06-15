@@ -76,7 +76,7 @@ class ProjectList {
       this.templateElement.content,
       true
     );
-    this.element = importedNode.firstElementChild as HTMLFormElement;
+    this.element = importedNode.firstElementChild as HTMLElement;
     this.element.id = "user-input";
   }
 }
