@@ -4,7 +4,23 @@ All dom moanipulation is being done with OOP
 
 // Class that manages the objects created by fillign the form
 class ProjectState {
+  private listeners: any[] = [];
   private projects: any[] = [];
+  private static instance: ProjectState;
+
+  private constructor() {}
+
+  static getInstance() {
+    if (this.instance) {
+      return this.instance;
+    }
+    this.instance = new ProjectState();
+    return this.instance;
+  }
+
+  addListener(listenerFn: Function) {
+    this.listeners.push(listenerFn);
+  }
 
   addProject(title: string, description: string, numOfPeople: number) {
     const newProject = {
@@ -16,6 +32,8 @@ class ProjectState {
     this.projects.push(newProject);
   }
 }
+
+const projectState = ProjectState.getInstance();
 
 // Validation Logic
 interface Validatable {
@@ -195,7 +213,8 @@ class ProjectInput {
     const userInput = this.gatherUserInput();
     if (Array.isArray(userInput)) {
       const [title, desc, people] = userInput;
-      // document.getElementById();
+      projectState.addProject(title, desc, people);
+
       console.log(title, desc, people);
       this.clearInputs();
     }
