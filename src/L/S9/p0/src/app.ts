@@ -180,6 +180,7 @@ class ProjectInput {
     const userInput = this.gatherUserInput();
     if (Array.isArray(userInput)) {
       const [title, desc, people] = userInput;
+      document.getElementById();
       console.log(title, desc, people);
       this.clearInputs();
     }
