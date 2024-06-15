@@ -2,6 +2,21 @@
 All dom moanipulation is being done with OOP 
 */
 
+// Class that manages the objects created by fillign the form
+class ProjectState {
+  private projects: any[] = [];
+
+  addProject(title: string, description: string, numOfPeople: number) {
+    const newProject = {
+      id: Math.random().toString(),
+      title: title,
+      description: description,
+      people: numOfPeople,
+    };
+    this.projects.push(newProject);
+  }
+}
+
 // Validation Logic
 interface Validatable {
   value: string | number;
@@ -81,8 +96,6 @@ class ProjectList {
     this.attach();
     this.renderContent();
   }
-
-  addProject() {}
 
   private renderContent() {
     const listId = `${this.type}-projects-list`;
@@ -182,7 +195,7 @@ class ProjectInput {
     const userInput = this.gatherUserInput();
     if (Array.isArray(userInput)) {
       const [title, desc, people] = userInput;
-      document.getElementById();
+      // document.getElementById();
       console.log(title, desc, people);
       this.clearInputs();
     }
