@@ -18,6 +18,7 @@ function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
 
 // Project Input Class - Fro rendering the form using TS
 class ProjectInput {
+  // Defining variables to interact with the dom
   templateElement: HTMLTemplateElement;
   hostElement: HTMLDivElement;
   element: HTMLFormElement;
@@ -53,10 +54,24 @@ class ProjectInput {
     this.attach();
   }
 
+  private gatherUserInput(): [string, string, number] {
+    const enteredTitle = this.titleInputElement.value;
+    const enteredDescription = this.descriptionInputElement.value;
+    const enteredPeople = this.peopleInputElement.value;
+
+    if (
+      enteredTitle.trim().length === 0 ||
+      enteredDescription.trim().length === 0 ||
+      enteredPeople.trim().length === 0
+    ) {
+    }
+  }
+
   @autobind
   private submitHandler(event: Event) {
     event.preventDefault();
     console.log(this.titleInputElement.value);
+    const userInput = this.gatherUserInput();
   }
 
   private configure() {
