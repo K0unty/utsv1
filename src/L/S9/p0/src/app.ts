@@ -254,8 +254,13 @@ class ProjectList
     }
   }
 
-  dropHandler(event: DragEvent): void {
-    const prjId = console.log(event.dataTransfer!.getData("text/plain"));
+  @autobind
+  dropHandler(event: DragEvent) {
+    const prjId = event.dataTransfer!.getData("text/plain");
+    projectState.moveProject(
+      prjId,
+      this.type === "active" ? ProjectStatus.Active : ProjectStatus.Finished
+    );
   }
 
   @autobind
