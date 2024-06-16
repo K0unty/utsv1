@@ -1,3 +1,5 @@
+import { Project, ProjectStatus } from "../models/project.js";
+
 // Project State Management - Class that manages the objects created by fillign the form
 
 type Listener<T> = (items: T[]) => void;
