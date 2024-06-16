@@ -5,68 +5,10 @@ All dom moanipulation is being done with OOP
 /// <reference path="drag-drop-interfaces.ts" />
 /// <reference path="project-model.ts" />
 /// <reference path="project-state.ts" />
+/// <reference path="validation.ts" />
+/// <reference path="autobind-decorator.ts" />
 
 namespace App {
-  // Validation Logic
-  interface Validatable {
-    value: string | number;
-    required?: boolean;
-    minLength?: number;
-    maxLength?: number;
-    min?: number;
-    max?: number;
-  }
-
-  // Validation logic for the form elements
-  function validate(validatableInput: Validatable) {
-    let isValid = true;
-    if (validatableInput.required) {
-      isValid =
-        isValid && validatableInput.value.toString().trim().length !== 0;
-    }
-    if (
-      validatableInput.minLength != null &&
-      typeof validatableInput.value === "string"
-    ) {
-      isValid =
-        isValid && validatableInput.value.length >= validatableInput.minLength;
-    }
-    if (
-      validatableInput.maxLength != null &&
-      typeof validatableInput.value === "string"
-    ) {
-      isValid =
-        isValid && validatableInput.value.length <= validatableInput.maxLength;
-    }
-    if (
-      validatableInput.min != null &&
-      typeof validatableInput.value === "number"
-    ) {
-      isValid = isValid && validatableInput.value >= validatableInput.min;
-    }
-    if (
-      validatableInput.max != null &&
-      typeof validatableInput.value === "number"
-    ) {
-      isValid = isValid && validatableInput.value <= validatableInput.max;
-    }
-    return isValid;
-  }
-
-  // Autobind decorator
-  function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
-    const originalMethod = descriptor.value;
-    const adjDescriptor: PropertyDescriptor = {
-      configurable: true,
-      enumerable: false,
-      get() {
-        const boundFn = originalMethod.bind(this);
-        return boundFn;
-      },
-    };
-    return adjDescriptor;
-  }
-
   // Component Base Class
   abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     templateElement: HTMLTemplateElement;
