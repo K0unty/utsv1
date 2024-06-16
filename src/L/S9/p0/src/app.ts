@@ -233,14 +233,14 @@ class ProjectList
   }
 
   @autobind
-  dragOverHandler(event: DragEvent) {
+  dragOverHandler(_: DragEvent) {
     const listEl = this.element.querySelector("ul")!;
     listEl.classList.add("droppable");
   }
 
-  dropHandler(event: DragEvent): void {}
+  dropHandler(_: DragEvent): void {}
 
-  dragLeaveHandler(event: DragEvent): void {}
+  dragLeaveHandler(_: DragEvent): void {}
 
   configure() {
     this.element.addEventListener("dragover", this.dragOverHandler);
