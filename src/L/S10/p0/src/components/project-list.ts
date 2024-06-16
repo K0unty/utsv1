@@ -1,3 +1,5 @@
+/// <reference path="base-component.ts"/>
+
 namespace App {
   // Project List Class
   export class ProjectList
