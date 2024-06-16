@@ -2,17 +2,7 @@
 All dom moanipulation is being done with OOP 
 */
 
-//Drag and Drop Interfaces
-interface Draggable {
-  dragStartHandler(event: DragEvent): void;
-  dragEndHandler(event: DragEvent): void;
-}
-
-interface DragTarget {
-  dragOverHandler(event: DragEvent): void;
-  dropHandler(event: DragEvent): void;
-  dragLeaveHandler(event: DragEvent): void;
-}
+/// <reference path="drag-drop-interfaces.ts" />
 
 // Project Type
 enum ProjectStatus {
