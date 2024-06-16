@@ -11,6 +11,7 @@ All dom moanipulation is being done with OOP
 /// <reference path="components/project-input.ts" />
 /// <reference path="components/project-items.ts" />
 /// <reference path="components/project-list.ts" />
+
 namespace App {
   // Project Input Class - Fro rendering the form using TS
 
