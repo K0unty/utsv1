@@ -1,4 +1,8 @@
-# L
+# S10
+
+> This is the continuation of S9 - Where the code is being refactored bu the code logic and goals of the app are the same. S9/ has been deplopyed and this one will not be
+
+---
 
 > Each section work is in its own folder here , and if the work is a whole project, those lesson numbers are then put into its own folder
 
