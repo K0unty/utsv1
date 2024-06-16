@@ -2,11 +2,11 @@
 All dom moanipulation is being done with OOP 
 */
 
-/// <reference path="drag-drop-interfaces.ts" />
-/// <reference path="project-model.ts" />
+/// <reference path="models/drag-drop.ts" />
+/// <reference path="models/project.ts" />
 /// <reference path="project-state.ts" />
 /// <reference path="validation.ts" />
-/// <reference path="autobind-decorator.ts" />
+/// <reference path="decorators/autobind.ts" />
 
 namespace App {
   // Component Base Class
