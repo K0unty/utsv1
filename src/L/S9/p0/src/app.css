@@ -134,7 +134,7 @@ button:active {
 }
 
 .droppable {
-  background: #ffe3ee;
+  background: rgb(1, 0, 0);
 }
 
 #finished-projects .droppable {
