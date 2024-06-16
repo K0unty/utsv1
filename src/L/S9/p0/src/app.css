@@ -81,7 +81,7 @@ button:active {
 }
 
 .projects header {
-  background: #ff0062;
+  background: #0059ff;
   height: 3.5rem;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@ button:active {
 }
 
 #finished-projects {
-  border-color: #0044ff;
+  border-color: #082d92;
 }
 
 #finished-projects header {
