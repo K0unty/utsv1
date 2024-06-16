@@ -12,12 +12,12 @@ html {
 
 body {
   margin: 0;
-  background-image: url("https://i.ibb.co/f085KGj/image.png");
+  background-image: url("https://i.ibb.co/xJzn17K/image.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-color: #21021f;
+  background-color: rgba(23, 2, 33, 0.922);
   background-blend-mode: multiply;
 }
 
@@ -134,7 +134,7 @@ button:active {
 }
 
 .droppable {
-  background-image: url("https://i.ibb.co/f085KGj/image.png");
+  background-image: url("https://i.ibb.co/xJzn17K/image.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
