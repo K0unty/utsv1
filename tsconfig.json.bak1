@@ -2,13 +2,13 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "module": "amd",
+    "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "noEmitOnError": true,
     // "outDir": "./dist",
     // "rootDir": "./src",
-    "outFile": "./",
+    // "outFile": "./",
 
     /* Bundler mode */
     "moduleResolution": "node",
