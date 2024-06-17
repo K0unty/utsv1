@@ -75,6 +75,10 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       new URL("./L/S10/p2/index.html", import.meta.url).href
     }" target="_blank">S10 <br> S9 Contiuation - p2</a>
     </button>
+    <button class="btn"> <a href="${
+      new URL("./L/S11/p3/index.html", import.meta.url).href
+    }" target="_blank">S11</a>
+    </button>
     <button class="btn"> Suck </button>
     
   <div>
